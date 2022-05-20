@@ -20,8 +20,10 @@ var_dump("Io mi chiamo $nome". ' ' . "questa è la mia mail $mail" . ' ' . "e ho
 
 /* Avvio i condizionali */
 /* name sia più lungo di 3 caratteri */
+/* mail contenga un punto e una chiocciola */
+/* age sia un numero */
 
-if(strlen($nome) > 3 && strpos($mail, '.') && strpos($mail, '@')) {
+if(strlen($nome) > 3 && strpos($mail, '.') && strpos($mail, '@') && is_numeric($age)) {
     var_dump("Accesso Consentito");
 } 
 else{
