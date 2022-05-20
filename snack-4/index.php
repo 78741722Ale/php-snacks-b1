@@ -8,7 +8,7 @@ $numbers = [];
 var_dump("La lunghezza dell'array vuoto è : " . count($numbers)); // verifico in console log
 /* Genero un numero randomico */
 /* $rand_int = rand(1,150); => si genera ma rimane sempre costante */
-var_dump("Questo è il numero random : " . $rand_int);
+/* var_dump("Questo è il numero random : " . $rand_int); */
 
 /* Avvio una funzione per un random integer */
 /** 
@@ -27,7 +27,7 @@ for($i = 0 ; $i <= 15 ; $i++) {
     $rand_int = getRandomInteger(1, 200); // Con una funzione
     /* $rand_int = rand(1, 200) => senza funzione */
     if(in_array($rand_int, $numbers)) {
-        var_dump("Il numero" . ' ' . $rand_int . ' ' . "è già presente e non può essere pushato");
+        var_dump("Il numero" . ' ' . $rand_int . ' ' . "è già presente e non può essere pushato + volte");
     } else {
         array_push($numbers, $rand_int); // altrimento pusho il numero !
     }
