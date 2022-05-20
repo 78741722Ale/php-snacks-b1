@@ -49,6 +49,15 @@ $media = $sum_voti / 2;
 var_dump("La media è : " . $media);
 */
 
+/**
+ * mediaVoti => Funzione per trovare la media
+ * $first => Primo numero, in questo caso è $sum_voti
+ * $second => il divisore, in questo caso 2
+ */
+function mediaVoti($first, $second) {
+    return $first / $second;
+}
+
 /* Ora metto tutto in un ciclo for */
 for($i = 0 ; $i < count($alunni); $i++) {
     /* salvo la somma in una nuova variabile del ciclo for  */
@@ -56,7 +65,8 @@ for($i = 0 ; $i < count($alunni); $i++) {
     // grazie al ciclo vedo i voti di tutti i ragazzi
     var_dump("Questa è la somma dei voti dell'alunno ". $alunni[$i]['Nome'] . ":" . ' ' . $sum_voti);
     // ora faccio la media dei voti dei ragazzi 
-    $media = $sum_voti / 2;
+    $media = mediaVoti($sum_voti, 2); // invoco la funzione
+    /* $media = $sum_voti / 2; */
     // in effetti vedo tutti i voti
     var_dump("Questa è la media dei voti dell'alunno ". $alunni[$i]['Nome'] . ":" . ' ' . $media);
     // ora li dichiaro con echo
