@@ -38,9 +38,15 @@ var_dump($partite);
 /* Prima partita (per verifica) */
 var_dump($partite[0]['Casa']. ' '. $partite[0]['Punteggio-casa']. '|' .$partite[0]['Ospiti']. ' ' .$partite[0]['Punteggio-Ospiti'] );
 
+/* Stampiamo a schermo tutte le partite con questo schema. Olimpia Milano - Cantù | 55-60 */
+
 /* Avvio il ciclo for e funziona */
 for($i = 0 ; $i < count($partite); $i++){
+    /* Stampo in console */
     var_dump($partite[$i]['Casa']. ' '. $partite[$i]['Punteggio-casa']. '|' .$partite[$i]['Ospiti']. ' ' .$partite[$i]['Punteggio-Ospiti'] );
+    /* Stampo con Eco */
+    echo $partite[$i]['Casa']. ' '. $partite[$i]['Punteggio-casa']. '|' .$partite[$i]['Ospiti']. ' ' .$partite[$i]['Punteggio-Ospiti'];
+
 }
 
 ?>
