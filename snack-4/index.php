@@ -23,7 +23,7 @@ function getRandomInteger($min, $max) {
 }
 
 /* Avvio il ciclo for */
-for($i = 0 ; $i <= 15 ; $i++) {
+for($i = 0 ; count($numbers) <= 15 ; $i++) {
     $rand_int = getRandomInteger(1, 200); // Con una funzione
     /* $rand_int = rand(1, 200) => senza funzione */
     if(in_array($rand_int, $numbers)) {
