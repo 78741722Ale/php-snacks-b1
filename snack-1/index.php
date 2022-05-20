@@ -35,7 +35,11 @@ $partite =
 
 /* Verifico in dump */
 var_dump($partite);
-/* Prima partita */
-var_dump("$partite[0][Casa]")
+/* Prima partita (per verifica) */
+var_dump($partite[0]['Casa']. ' '. $partite[0]['Punteggio-casa']. '|' .$partite[0]['Ospiti']. ' ' .$partite[0]['Punteggio-Ospiti'] )
+
+
+
+
 
 ?>
