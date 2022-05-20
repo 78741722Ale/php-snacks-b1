@@ -64,13 +64,18 @@ for($i = 0 ; $i < count($alunni); $i++) {
     $sum_voti = array_sum($alunni[$i]['voti scolastici']);
     // grazie al ciclo vedo i voti di tutti i ragazzi
     var_dump("Questa è la somma dei voti dell'alunno ". $alunni[$i]['Nome'] . ":" . ' ' . $sum_voti);
+    // Questa è la somma della quantità di valori racchiusi voti scolastici
+    $alunni_length = count($alunni[$i]['voti scolastici']);
+    var_dump("La lunghezza totale degli array è : " . $alunni_length); // la verifico in console
     // ora faccio la media dei voti dei ragazzi 
-    $media = mediaVoti($sum_voti, 2); // invoco la funzione
-    /* $media = $sum_voti / 2; */
-    // in effetti vedo tutti i voti
+    $media = mediaVoti($sum_voti, $alunni_length); // invoco la funzione
     var_dump("Questa è la media dei voti dell'alunno ". $alunni[$i]['Nome'] . ":" . ' ' . $media);
+    /* Ora provo ad arrotondare */
+    $rounded_media = round($media, 0);
+    var_dump("il numero arrotondato della media è :" . ' '. $rounded_media);
+
     // ora li dichiaro con echo
-    echo "Lo studente" . ' ' . $alunni[$i]['Nome'] . ' ' . $alunni[$i]['Cognome'] . ' ' . "ha una media voti di :" . ' ' . $media;
+    echo "Lo studente" . ' ' . $alunni[$i]['Nome'] . ' ' . $alunni[$i]['Cognome'] . ' ' . "ha una media voti di :" . ' ' . $rounded_media;
 }
 
 ?>
