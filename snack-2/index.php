@@ -15,7 +15,29 @@ $mail = ($_GET['email']); // la salvo in variabile
 var_dump($_GET['anni']); // Anni
 $age = ($_GET['anni']); // la salvo in variabile
 
-
+/* In effetti a schermo esce tutto */
 var_dump("Io mi chiamo $nome". ' ' . "questa è la mia mail $mail" . ' ' . "e ho $age anni");
+
+/* Avvio i condizionali */
+/* name sia più lungo di 3 caratteri */
+
+if(strlen($nome) > 3 && strpos($mail, '.') && strpos($mail, '@')) {
+    var_dump("Accesso Consentito");
+} 
+else{
+    var_dump("Accesso Negato");
+}; 
+
+
+
+
+/* mail contenga un punto e una chiocciola */
+/* if(strpos($mail, '.') || strpos($mail, '@')) {
+    var_dump("Si, la mail contiene un punto e una chiocciola");
+} else {
+    var_dump("Accesso Negato");
+} */
+
+
 
 ?>
